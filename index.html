@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#002244" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rooting Guide" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%BASE_URL%apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+    <meta name="description" content="Red Sox and Patriots rooting guides. Follow the games that matter in Boston’s playoff races." />
+    <title>Rooting Guide</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Libre+Franklin:wght@400;500;600&display=swap");
+
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; min-height: 100vh; color: #002244; background: #f4f5f6; font-family: "Libre Franklin", Arial, sans-serif; }
+      main { width: min(680px, calc(100% - 40px)); margin: clamp(48px, 12vh, 120px) auto; }
+      .eyebrow { margin: 0 0 10px; color: #596875; font-size: .65rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+      h1 { margin: 0 0 32px; font-family: "Barlow Condensed", sans-serif; font-size: clamp(2.5rem, 8vw, 3.5rem); font-weight: 700; text-transform: uppercase; }
+      nav { border-top: 2px solid #002244; }
+      a { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 22px; padding: 26px 0; border-bottom: 1px solid #cdd3d8; color: inherit; text-decoration: none; }
+      a:hover { background: #00224405; }
+      a:focus-visible { outline: 3px solid #c60c30; outline-offset: 5px; }
+      img { display: block; width: 64px; height: 64px; }
+      strong { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 2rem; font-weight: 600; text-transform: uppercase; }
+      small { display: block; margin-top: 6px; color: #596875; font-size: .75rem; }
+      .arrow { font-size: 1.4rem; }
+      .sox { color: #12372a; }
+      @media (max-width: 480px) { a { grid-template-columns: 52px 1fr auto; gap: 16px; } img { width: 52px; height: 52px; } strong { font-size: 1.7rem; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Boston sports</p>
+      <h1>Rooting guide</h1>
+      <nav aria-label="Choose your team">
+        <a class="sox" href="%BASE_URL%red-sox/">
+          <img src="%BASE_URL%red-sox/favicon.svg" alt="" />
+          <span><strong>Red Sox</strong><small>Your daily MLB rooting guide</small></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="%BASE_URL%patriots/">
+          <img src="%BASE_URL%patriots/favicon.svg" alt="" />
+          <span><strong>Patriots</strong><small>Your weekly NFL rooting guide</small></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>

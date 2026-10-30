@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="rounded"><rect width="512" height="512" rx="112"/></clipPath>
+    <clipPath id="right"><path d="M256 0h256v512H256Z"/></clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <rect width="512" height="512" fill="#12372a"/>
+    <path d="M256 0h256v512H256Z" fill="#002244"/>
+    <path d="M256 104 408 256 256 408 104 256Z" fill="#bd3039"/>
+    <path d="M256 104 408 256 256 408 104 256Z" fill="#c60c30" clip-path="url(#right)"/>
+    <path
+      fill="#f3efe4"
+      fill-rule="evenodd"
+      transform="translate(-45 60) scale(.7)"
+      d="M183 133h85c63 0 99 28 99 77 0 28-13 49-39 62 31 13 47 37 47 71 0 57-40 86-105 86h-87Zm58 51v67h28c35 0 52-11 52-34 0-22-17-33-52-33Zm0 116v78h31c38 0 57-13 57-39 0-26-19-39-57-39Z"
+    />
+    <path
+      fill="#b0b7bc"
+      fill-rule="evenodd"
+      transform="translate(165 60) scale(.7)"
+      d="M183 133h85c65 0 103 32 103 91 0 59-39 94-105 94h-25v111h-58Zm58 51v83h27c37 0 55-14 55-42 0-28-18-41-55-41Z"
+    />
+  </g>
+</svg>

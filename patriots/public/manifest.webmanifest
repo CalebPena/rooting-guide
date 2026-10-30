@@ -1,0 +1,16 @@
+{
+  "name": "Patriots Rooting Guide",
+  "short_name": "Pats Guide",
+  "description": "The weekly NFL games that matter most for the Patriots playoff race.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f5f6",
+  "theme_color": "#002244",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

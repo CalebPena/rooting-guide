@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Libre+Franklin:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  color: #002244;
+  background: #f4f5f6;
+  font-synthesis: none;
+  --navy: #002244;
+  --red: #c60c30;
+  --silver: #b0b7bc;
+  --muted: #596875;
+  --rule: #cdd3d8;
+  --favorable: #24704f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: linear-gradient(rgba(0, 34, 68, .025) 1px, transparent 1px); background-size: 100% 32px; }
+button, a { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; opacity: .3; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+.site-shell { width: min(1240px, calc(100% - 40px)); margin: auto; }
+.week-bar { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; max-width: 430px; margin: 20px auto 24px; text-align: center; }
+.week-bar button { display: grid; width: 38px; height: 38px; padding: 0; place-items: center; border: 1px solid var(--silver); border-radius: 50%; background: transparent; color: var(--navy); }
+.week-bar button:not(:disabled):hover { background: #e2e7eb; }
+.week-bar svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.week-bar span, .week-bar strong { display: block; }
+.week-bar span { color: var(--red); font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; }
+.week-bar strong { margin: 3px 0; font-family: "Barlow Condensed", sans-serif; font-size: 1.25rem; }
+.eyebrow { margin: 0; color: var(--red); font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; }
+.mock-badge { display: inline-block; margin-left: 8px; padding: 3px 5px; border: 1px solid var(--red); color: var(--red); font-size: .52rem; letter-spacing: .08em; vertical-align: 1px; }
+.game-card { padding: 17px 14px 21px; border-bottom: 1px solid var(--rule); }
+.game-heading { position: relative; display: flex; gap: 14px; align-items: center; min-height: 22px; margin-bottom: 10px; }
+.pick-label { position: absolute; top: 50%; left: calc(25% - 18.5px); transform: translate(-50%, -50%); color: var(--red); font-size: .57rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.game-status { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-left: auto; color: var(--muted); font-size: .63rem; font-weight: 700; text-transform: uppercase; text-align: right; }
+.magic-impact { padding: 4px 6px; border: 1px solid #68408f; border-radius: 3px; color: white; background: #68408f; font-size: .55rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.matchup, .scoreline { display: grid; grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr); align-items: center; text-align: center; }
+.matchup-team { position: relative; display: flex; gap: 8px; align-items: center; justify-self: center; min-width: 0; min-height: 44px; padding: 6px 8px; }
+.matchup-team h3 { margin: 0; font-family: "Barlow Condensed", sans-serif; font-size: clamp(1.35rem, 2.2vw, 1.8rem); line-height: 1; text-transform: uppercase; overflow-wrap: anywhere; }
+.matchup-team .gap { position: absolute; top: 50%; left: calc(100% + 7px); transform: translateY(-50%); }
+.separator { color: var(--muted); font-family: "Barlow Condensed", sans-serif; font-size: .85rem; text-transform: uppercase; }
+.gap { flex-shrink: 0; color: var(--muted); font-size: .72rem; white-space: nowrap; }
+.gap--ahead { color: var(--red); }
+.scoreline { margin-top: 3px; padding-top: 3px; }
+.game-card--favorable .scoreline, .game-card--unfavorable .scoreline, .game-card--neutral .scoreline { border-top: 1px solid var(--rule); }
+.scoreline > strong { font-family: "Barlow Condensed", sans-serif; font-size: 2.4rem; font-weight: 500; }
+.scoreline > span { color: var(--muted); font-size: .58rem; font-weight: 700; text-transform: uppercase; }
+.live-field { display: grid; justify-items: center; gap: 3px; width: 74px; padding: 3px 0; }
+.live-field > span { font-size: .52rem; font-weight: 700; line-height: 1.2; text-transform: uppercase; white-space: nowrap; }
+.live-field__possession { color: var(--navy); }
+.live-field__diagram { display: block; width: 74px; height: auto; overflow: visible; }
+.live-field__outline { fill: #f4f5f6; stroke: var(--navy); stroke-width: 1.5; }
+.live-field__endzones { fill: var(--navy); }
+.live-field__yard-line { stroke: var(--rule); stroke-width: 1; }
+.live-field__hash { stroke: var(--silver); stroke-width: 1; }
+.live-field__first-down { stroke: var(--navy); stroke-width: 1.5; stroke-dasharray: 2 2; }
+.live-field__scrimmage { stroke: var(--red); stroke-width: 1.5; }
+.live-field__ball { fill: var(--red); stroke: #f4f5f6; stroke-width: 1; }
+.live-field__down { color: var(--navy); }
+.live-field__position { color: var(--muted); }
+.game-card--patriots { padding: 2px 0 30px; border-top: 2px solid var(--navy); border-bottom: 0; }
+.game-card--patriots .game-heading { margin-bottom: 16px; }
+.game-card--patriots .matchup { max-width: 900px; margin: auto; }
+.game-card--patriots .matchup-team h3 { margin: .5em 0; font-size: clamp(2rem, 4vw, 3.25rem); }
+.game-card--patriots .scoreline { max-width: 900px; margin: 0 auto; border-top: 1px solid var(--rule); }
+.game-card--favorable { background: linear-gradient(90deg, #24704f18, #24704f04); box-shadow: inset 5px 0 var(--favorable); }
+.game-card--unfavorable { background: linear-gradient(90deg, #c60c3018, #c60c3004); box-shadow: inset 5px 0 var(--red); }
+.game-card--neutral { background: #b0b7bc20; box-shadow: inset 5px 0 var(--silver); }
+.result-badge { display: inline-block; padding: 5px 7px; color: white; background: var(--muted); font-size: .6rem; border-radius: 2px; }
+.game-card--favorable .result-badge { background: var(--favorable); }
+.game-card--unfavorable .result-badge { background: var(--red); }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 56px; padding: 64px 0 72px; }
+.section-heading { margin-bottom: 28px; }
+.section-heading h1, .section-heading h2 { margin: 0; font-family: "Barlow Condensed", sans-serif; font-size: 2.2rem; font-weight: 700; line-height: 1; text-transform: uppercase; }
+.recommendations { border-top: 2px solid var(--navy); }
+.standings { padding-top: 5px; }
+.standings .section-heading { margin-bottom: 0; padding-bottom: 16px; border-bottom: 2px solid var(--navy); }
+.race-list { position: relative; }
+.race-list::before { content: ""; position: absolute; top: 0; bottom: 0; left: 7px; width: 1px; background: var(--rule); }
+.race-team { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; padding: 13px 0 13px 25px; border-bottom: 1px solid var(--rule); font-size: .75rem; }
+.race-team::before { content: ""; position: absolute; top: 20px; left: 3px; width: 9px; height: 9px; border-radius: 50%; background: #f4f5f6; border: 2px solid var(--navy); }
+.race-team__heading { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.race-team__heading > strong { font-weight: 700; }
+.playoff-badge { padding: 2px 5px; border-radius: 2px; color: white; background: var(--navy); font-family: "Barlow Condensed", sans-serif; font-size: .55rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.race-team__details { display: flex; grid-row: 2; gap: 5px; min-width: 0; color: inherit; opacity: .68; white-space: nowrap; }
+.race-team__details span:last-child { overflow: hidden; text-overflow: ellipsis; }
+.race-team > .gap { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-size: .72rem; text-align: right; }
+.race-team > .gap span { font-size: .9rem; }
+.race-team > .gap--behind { color: var(--navy); }
+.race-team--playoff:not(.race-team--patriots) { padding-right: 8px; background: #00224412; }
+.race-team--playoff::before { background: var(--navy); border-color: var(--navy); }
+.race-team--patriots { margin: 3px -12px 3px 0; padding-right: 12px; color: white; background: var(--red); border: 0; }
+.race-team--patriots::before { background: white; border-color: white; }
+.race-team--patriots .gap, .race-team--patriots .race-team__details { color: white; }
+.race-team--patriots .playoff-badge { color: var(--red); background: white; }
+.bye-week { padding: 2px 0 30px; border-top: 2px solid var(--navy); }
+.bye-week h2, .empty-card h2 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.bye-week h2 { margin: 10px 0; font-size: 2rem; }
+.bye-week > p:last-child { margin: 0; color: var(--muted); }
+.empty-card { padding: 22px 0; }
+.empty-card h2 { margin-top: 0; }
+.empty-card p { color: var(--muted); font-size: .8rem; }
+.state-page { display: grid; min-height: 50vh; place-content: center; text-align: center; }
+.state-page h1 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.state-page p { color: var(--muted); font-size: .85rem; }
+.loader { width: 32px; height: 32px; margin: auto; border: 3px solid var(--silver); border-top-color: var(--red); border-radius: 50%; animation: spin .8s linear infinite; }
+.retry { margin: 10px auto; padding: 10px 18px; color: white; background: var(--navy); border: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (min-width: 901px) {
+  .standings { padding-top: 0; }
+  .standings .section-heading { padding-bottom: 28px; }
+}
+@media (max-width: 900px) { .content-grid { grid-template-columns: 1fr; gap: 52px; } }
+@media (max-width: 620px) {
+  .site-shell { width: calc(100% - 24px); }
+  .week-bar { margin: 15px auto 18px; }
+  .game-card { padding: 14px 10px 18px; }
+  .game-heading { gap: 8px; flex-wrap: wrap; }
+  .pick-label { left: calc(25% - 16px); font-size: .46rem; }
+  .game-status { font-size: .55rem; }
+  .matchup, .scoreline { grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); }
+  .live-field, .live-field__diagram { width: 64px; }
+  .matchup-team { gap: 5px; min-height: 39px; padding: 5px; }
+  .matchup-team h3 { font-size: 1.2rem; }
+  .game-card--patriots .matchup-team h3 { font-size: 1.55rem; }
+  .gap { font-size: .65rem; }
+  .game-card--patriots { padding: 2px 0 18px; }
+  .content-grid { gap: 36px; padding: 30px 0 42px; }
+  .guide .section-heading { margin-bottom: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { .loader { animation: none; } }
